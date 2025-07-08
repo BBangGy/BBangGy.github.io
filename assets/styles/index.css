@@ -1,0 +1,95 @@
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.5rem;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+#header > .layout-content > .list {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    gap: 0.7rem;
+}
+#header > .layout-content > .list > .item{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+}
+#header > .layout-content > .list > .item::after {
+    content :'';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.125rem;
+    bottom: 0;
+    left: 0;
+    background-color: #1E5687;
+    transform-origin: bottom right;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+}
+
+#header > .layout-content > .list > .item:hover::after {
+    transform:scaleX(1);
+    transform-origin: bottom left;
+}
+
+.to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+.to-top>.move-to-top{
+    border-radius: 0.5rem;
+    cursor: pointer;
+    animation-name: animation-to-top;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 800ms;
+}
+.to-top img{
+    width: 2rem;
+    height: 2rem;
+}
+@keyframes animation-to-top {
+    0% {
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@media screen and (max-width: 60rem){
+    #header>.layout-content{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #header>.layout-content>.list{
+        width: 100vw;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 40rem){
+    #header > .layout-content > .list{
+        font-size: 1rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}

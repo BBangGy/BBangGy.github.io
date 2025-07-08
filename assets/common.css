@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "styles/specifyDialog.css";
+@import "styles/contact.css";
+html
+{
+    height: 100vh;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+    margin-inline: 0;
+    margin-block: 0;
+    padding-inline: 0;
+    background-color: black;
+}
+h2{
+    color: #ffffff;
+}
+.layout-wrapper{
+    padding: 0 2.5rem;
+}
+ol, ul, li {
+    list-style-type: none;
+}
+#main #scroll-section1,
+#main #scroll-section2,
+#main #scroll-section3,
+#main #scroll-section4{
+    gap: 5rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+* {
+    transform: none;
+}
