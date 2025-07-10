@@ -1,33 +1,36 @@
 @charset "UTF-8";
 
-@import "styles/specifyDialog.css";
-@import "styles/contact.css";
-html
-{
-    height: 100vh;
-    font-family: "Noto Sans KR", sans-serif;
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #0D1419;
+    color: #fff;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-
-body {
-    margin-inline: 0;
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
     margin-block: 0;
+    padding-block: 0;
+    margin-inline: 0;
     padding-inline: 0;
-    background-color: black;
-}
-h2{
-    color: #ffffff;
-}
-.layout-wrapper{
-    padding: 0 2.5rem;
 }
 ol, ul, li {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+    margin-block: 0;
+    padding-block: 0;
+
 }
-#main #scroll-section1,
-#main #scroll-section2,
-#main #scroll-section3,
-#main #scroll-section4{
-    gap: 5rem;
+button{
+    border: none;
 }
 a{
     color: white;
@@ -35,4 +38,11 @@ a{
 }
 * {
     transform: none;
+    box-sizing: border-box;
+}
+
+
+img {
+    width: 3rem;
+    height: 3rem;
 }
