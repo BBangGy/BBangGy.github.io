@@ -344,7 +344,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   width: 48.1875rem;
   height: 30rem;
   flex-shrink: 0;
@@ -355,10 +355,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: 0.5rem;
   width: 9rem;
   height: 2rem;
-  opacity: 0;
+  opacity: 1;
 }
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box div > span {
   width: 100%;
@@ -374,11 +374,22 @@
   transition-duration: 200ms;
   transition-timing-function: ease-out;
 }
+#main .common.projects > .layout-container > .sliderWrapper > .slider > .box div > .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 48.1875rem;
+  opacity: 0;
+}
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box.active > img {
   transform: rotateZ(0deg);
   transition-property: transform, opacity;
   transition-duration: 400ms;
   transition-timing-function: ease-out;
+  opacity: 1;
+}
+#main .common.projects > .layout-container > .sliderWrapper > .slider > .box.active > div > .list {
   opacity: 1;
 }
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box > img {
@@ -403,7 +414,6 @@
   transition-timing-function: ease-out;
 }
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box > img:hover + div {
-  opacity: 1;
   transition-property: opacity;
   transition-duration: 400ms;
   transition-timing-function: ease-out;
@@ -661,6 +671,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0;
+  width: 100vw;
+  height: auto;
 }
 #main .common.about > .layout-container > .pro-container {
   width: 30rem;

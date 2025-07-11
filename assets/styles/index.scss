@@ -337,47 +337,18 @@
             width: 48.1875rem;
 
             > .box {
-              @include flex(column, center, center, 0.5rem);
+              @include flex(column, center, center, 1rem);
               width: 48.1875rem;
               height: 30rem;
               flex-shrink: 0;
               cursor: pointer;
 
-              //> .layer {
-              //  position: absolute;
-              //  width: 48.1875rem;
-              //  height: 28rem;
-              //  background-color: #fff;
-              //  border-radius: 0.625rem;
-              //  z-index: 0;
-              //  transition: all 0.3s ease;
-              //
-              //  // 겹겹이 쌓인 정도를 nth-child로 표현
-              //  &:nth-of-type(1) {
-              //    transform: translateY(-0.9rem);
-              //    opacity: 0.1;
-              //    z-index: 1;
-              //  }
-              //
-              //  &:nth-of-type(2) {
-              //    transform: translateY(-1.5rem);
-              //    opacity: 0.07;
-              //    z-index: 0;
-              //  }
-              //
-              //  &:nth-of-type(3) {
-              //    transform: translateY(-2rem);
-              //    opacity: 0.05;
-              //    z-index: -1;
-              //  }
-              //}
-
 
               div {
-                @include flex(column, center, center);
+                @include flex(column, center, center,0.5rem);
                 width: 9rem;
                 height: 2rem;
-                opacity: 0;
+                opacity: 1;
 
                 > span {
                   width: 100%;
@@ -393,6 +364,15 @@
                   transition-duration: 200ms;
                   transition-timing-function: ease-out;
                 }
+
+                > .list {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-around;
+                  align-items: center;
+                  width: 48.1875rem;
+                  opacity: 0;
+                }
               }
 
               &.active {
@@ -402,6 +382,11 @@
                   transition-duration: 400ms;
                   transition-timing-function: ease-out;
                   opacity: 1;
+                }
+                >div{
+                  >.list{
+                    opacity: 1;
+                  }
                 }
               }
 
@@ -428,7 +413,6 @@
                   transition-timing-function: ease-out;
 
                   & + div {
-                    opacity: 1;
                     transition-property: opacity;
                     transition-duration: 400ms;
                     transition-timing-function: ease-out;
@@ -712,6 +696,8 @@
     &.about {
       > .layout-container {
         @include flex(column, flex-start, flex-start);
+        width: 100vw;
+        height: auto;
 
         > .pro-container {
           width: 30rem;

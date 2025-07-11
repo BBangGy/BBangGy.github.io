@@ -117,43 +117,61 @@ const projectImageCount = {
     diary: 5,
     kobook: 4,
     r3f: 2,
-    taza: 7
+    taza: 7,
+    annualLeave: 7,
+    board:6
 };
 const projectDescriptions = {
     clone: [
-        "GOOGLE 홈페이지를 클론 코딩",
-        "iMBank 홈페이지를 클론 코딩",
-        "당근 홈페이지를 클론 코딩",
-        "번개장터 상세페이지를 클론 코딩"
+        "GOOGLE 홈페이지를 클론 코딩해보았습니다.",
+        "iMBank 홈페이지를 클론 코딩해보았습니다.",
+        "당근 홈페이지를 클론 코딩해보았습니다.",
+        "번개장터 상세페이지를 클론 코딩해보았습니다."
     ],
     taza: [
         "KAKO API를 활용한 택시 요금 계산 프로젝트",
-        "경로찾기를 통해 경로를 설정하여",
-        "출발지와 도착지를 설정한다.",
-        "호출을 누르면 KAKO API를 통해 결제까지 가능하다.",
+        "경로찾기를 통해 경로를 설정합니다.",
+        "출발지와 도착지를 설정합니다.",
+        "호출을 누르면 KAKAO API를 통해 결제까지 가능합니다.",
         "",
         ""
     ],
     kobook: [
         "공공API를 활용하여 만든 프로젝트",
-        "책을 검색하여 공공API로 데이터를 불러와 리스트로 보여준다.",
-        "책을 빌리기 위해 도서관을 찾는다.",
-        "도서관을 입력하면 그 지역 도서관이 나오며 정보와 길을 안내해준다."
+        "책을 검색하여 공공API로 데이터를 불러와 리스트로 보여줍니다.",
+        "책을 빌리기 위해 도서관을 찾습니다.",
+        "도서관을 입력하면 그 지역 도서관이 나오며 정보와 길을 안내해줍니다."
     ],
     diary: [
-        "리액트 프레임워크를 공부하기 위해서 만들어본 프로젝트",
-        "useState, useEffect, useRef 등 훅을 사용하여 입력하고, localStorage에 저장하고, 참조하는 미니 프로젝트를 만들었다.",
-        "적은 일기를 localStorage에 저장하여 해당 하는 월에 보여준다.",
-        "선택을 하기위한 페이지 입니다.",
-        "localStorage에 저장된 값을 불러와서 수행한다."
+        "리액트 프레임워크를 공부하기 위해서 만들어본 프로젝트\n useState, useEffect, useRef 등 훅을 사용하여 입력하고, localStorage에 저장하고, 참조하는 미니 프로젝트를 만들었습니다.",
+        "",
+        "적은 일기를 localStorage에 저장하여 해당 하는 월에 보여줍니다.",
+        "작성 하기위한 페이지 입니다.",
+        "localStorage에 저장된 값을 불러와서 수행합니다."
     ],
     r3f: [
         "리액트 프레임워크를 활용한 인터렉티브 웹 프로젝트",
-        "react-three/fiber와 react-three/drei를 활용해 사용자가 3D 신발 모델을 회전하고 직접 색상을 선택하여 커스터마이징할 수 있는 기능을 구현하였다.fiber를 통해 Three.js의 객체(Scene, Mesh, Light 등)를React 컴포넌트 형태로 다룰 수 있게 해보았고, drei를 통해 카메라 컨트롤, 조명 등을 간결하게 처리하며 사용자 경험 중심의 개발을 시도해보았다."
+        "react-three/fiber와 react-three/drei를 활용해 사용자가 3D 신발 모델을 회전하고 직접 색상을 선택하여 커스터마이징할 수 있는 기능을 구현하였습니다.fiber를 통해 Three.js의 객체(Scene, Mesh, Light 등)를React 컴포넌트 형태로 다룰 수 있게 해보았고, drei를 통해 카메라 컨트롤, 조명 등을 간결하게 처리하며 사용자 경험 중심의 개발을 시도해보았습니다."
 
     ],
-
-    annualLeave: []
+    annualLeave: [
+        "프론트와 백엔드를 같이 구현한 연차프로그램\nSpring Boot와 MyBatis 기반의 웹 애플리케이션으로, 사용자 로그인, 회원가입, 아이디·비밀번호 찾기, 연차 등록 기능을 구현했습니다." +
+        "프론트엔드는 HTML/CSS/JavaScript로 구성하고, MariaDB와 연동하여 사용자 인증과 데이터 관리를 처리했습니다.",
+        "로그인 페이지와 기능을 구현  \n (유효성 검사도 구현하였습니다.)",
+        "회원가입 페이지와 기능을 구현 \n (유효성 검사도 구현하였습니다.)",
+        "아이디/비밀번호찾기와 기능을 구현",
+        "",
+        "",
+        "연차 등록후 페이지"
+    ],
+    board:[
+        "프론트와 백엔드를 같이 구현한 게시판 프로그램\nSpring Boot와 MyBatis 기반의 웹 애플리케이션으로, 사용자 로그인, 회원가입, 이메일 인증, 게시판 기능, 댓글 기능,페이지네이션을 구현했습니다.",
+        "로그인 페이지와 기능을 구현  \n (유효성 검사도 구현하였습니다.)",
+        "회원가입 페이지와 기능을 구현 \n (유효성 검사도 구현하였습니다.)",
+        "마이페이지와 기능을 구현  \n (유효성 검사도 구현하였습니다.)",
+        "",
+        "게시판 등록후 모습입니다."
+    ]
 };
 
 
@@ -215,7 +233,7 @@ function renderDialogSlides() {
 
         if (descriptionText) {
             const desc = document.createElement('div');
-            desc.textContent = descriptionText;
+            desc.innerHTML = descriptionText.replace(/\n/g, '<br>');
             desc.style.color = 'white';
             desc.style.marginTop = '1rem';
             desc.style.fontSize = '2rem';
