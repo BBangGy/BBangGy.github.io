@@ -747,6 +747,10 @@
   line-height: 3rem;
   font-size: 1.2rem;
 }
+#main .common.about > .layout-container > .introduce-container > .education > .edu > .list > .item:first-child > span:last-child {
+  display: block;
+  text-indent: 2rem;
+}
 #main .common.about > .layout-container > .introduce-container > .education > .license {
   height: 100%;
 }

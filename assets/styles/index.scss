@@ -803,7 +803,17 @@
                   font-family: "Oswald", sans-serif;
                   line-height: 3rem;
                   font-size: 1.2rem;
+
+                  &:first-child {
+                    > span {
+                      &:last-child {
+                        display: block;
+                        text-indent: 2rem;
+                      }
+                    }
+                  }
                 }
+
               }
             }
 

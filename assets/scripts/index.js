@@ -1,7 +1,7 @@
 const $main = document.getElementById('main');
 $main.querySelector(':scope > .common.main > .start')
     .addEventListener('click', () => {
-        const target = document.getElementById('projects');
+        const target = document.getElementById('about');
         target.scrollIntoView({behavior: "smooth"});
 
         // 모든 메뉴에서 active 제거
@@ -9,7 +9,7 @@ $main.querySelector(':scope > .common.main > .start')
         menuLinks.forEach(link => link.classList.remove('active'));
 
         // #work로 가는 링크만 active 추가
-        const workLink = document.querySelector('.list .item a[href="#projects"]');
+        const workLink = document.querySelector('.list .item a[href="#about"]');
         if (workLink) {
             workLink.classList.add('active');
         }
@@ -117,7 +117,7 @@ const projectImageCount = {
     diary: 5,
     kobook: 4,
     r3f: 2,
-    taza:7
+    taza: 7
 };
 const projectDescriptions = {
     clone: [
@@ -126,7 +126,7 @@ const projectDescriptions = {
         "당근 홈페이지를 클론 코딩",
         "번개장터 상세페이지를 클론 코딩"
     ],
-    taza:[
+    taza: [
         "KAKO API를 활용한 택시 요금 계산 프로젝트",
         "경로찾기를 통해 경로를 설정하여",
         "출발지와 도착지를 설정한다.",
