@@ -700,7 +700,7 @@
         height: auto;
 
         > .pro-container {
-          width: 30rem;
+          width: 100%;
           height: 30rem;
           position: relative;
 
@@ -719,12 +719,23 @@
             }
           }
 
+          >.contact{
+            text-align: right;
+            //height: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            >span{
+              
+            }
+          }
+
           > .profile-image {
             @include flex(column, center, center);
             top: 0;
             left: 0;
             background-repeat: no-repeat;
-            width: 100%;
+            width: 30rem;
             height: 100%;
             border-radius: 99rem;
             border: 0.0625rem solid #ffffff;
@@ -750,6 +761,9 @@
               opacity: 0;
               transform: rotateY(180deg);
             }
+          }
+          >.contact{
+            right: 0;
           }
         }
 

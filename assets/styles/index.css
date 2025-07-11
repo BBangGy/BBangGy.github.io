@@ -675,7 +675,7 @@
   height: auto;
 }
 #main .common.about > .layout-container > .pro-container {
-  width: 30rem;
+  width: 100%;
   height: 30rem;
   position: relative;
 }
@@ -687,6 +687,12 @@
   opacity: 1;
   transform: rotateY(0deg);
 }
+#main .common.about > .layout-container > .pro-container > .contact {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 #main .common.about > .layout-container > .pro-container > .profile-image {
   display: flex;
   flex-direction: column;
@@ -696,7 +702,7 @@
   top: 0;
   left: 0;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 30rem;
   height: 100%;
   border-radius: 99rem;
   border: 0.0625rem solid #ffffff;
@@ -719,6 +725,9 @@
   background-position: center top;
   opacity: 0;
   transform: rotateY(180deg);
+}
+#main .common.about > .layout-container > .pro-container > .contact {
+  right: 0;
 }
 #main .common.about > .layout-container > .introduce-container {
   display: flex;
