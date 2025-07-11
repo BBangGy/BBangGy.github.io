@@ -236,7 +236,8 @@ function renderDialogSlides() {
             desc.innerHTML = descriptionText.replace(/\n/g, '<br>');
             desc.style.color = 'white';
             desc.style.marginTop = '1rem';
-            desc.style.fontSize = '2rem';
+            desc.style.fontSize = '1rem';
+            desc.style.fontFamily = 'Oswald, sans-serif';
             desc.style.textAlign = 'center';
             desc.style.width = '50rem';
             item.appendChild(desc);
