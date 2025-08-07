@@ -19,21 +19,49 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 document.addEventListener('DOMContentLoaded', () => {
+    // 초기 Intro 메뉴 활성화
     const introLink = document.querySelector('a[href="#intro"]');
     introLink.classList.add('active');
     introLink.addEventListener('click', (e) => {
         e.preventDefault();
         window.scrollTo({top: 0, behavior: "smooth"});
-    })
+    });
+
     const menuLinks = document.querySelectorAll('.list .item a');
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
-            menuLinks.forEach(l => l.classList.remove('active')); // 기존 active 제거
-            link.classList.add('active'); // 클릭된 메뉴에 active 추가
-        })
-    })
+            menuLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
 
-})
+    // ✅ IntersectionObserver 추가
+    const sections = document.querySelectorAll('main > section.common');
+    const observer = new IntersectionObserver(
+        // IntersectionObserver는 스크롤을 감지해서 요소(section 등)가 화면에 들어왔는지를 관찰하는 API입니다.
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    //entry.isIntersecting=	현재 화면에 절반 이상 보이는가 (true/false)
+                    const id = entry.target.getAttribute('id');
+                    // entry.target= 감시 중인 DOM 요소 (<section id="about"> 등)
+
+                    // 메뉴 active 클래스 갱신
+                    menuLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        },
+        {
+            root: null, //viewport 자체를 기준으로 감지 (기본 설정)
+            rootMargin: '0px', //여백 없이 정확히 viewport 크기로 감지
+            threshold: 0.4, // 절반 이상 보일 때만 적용-> 얼만큼 보이는지에 대해서 설정
+        }
+    );
+
+    sections.forEach(section => observer.observe(section));
+});
 const wrapper = $main.querySelector(':scope>.common.projects>.layout-container>.sliderWrapper>.slider');
 const slides = wrapper.querySelectorAll(':scope>.box');
 const prevBtn = $main.querySelector(':scope>.common.projects>.layout-container>.sliderWrapper>.prev');
@@ -119,7 +147,8 @@ const projectImageCount = {
     r3f: 2,
     taza: 7,
     annualLeave: 7,
-    board:6
+    board: 6,
+    homggoo:13
 };
 const projectDescriptions = {
     clone: [
@@ -164,13 +193,29 @@ const projectDescriptions = {
         "",
         "연차 등록후 페이지"
     ],
-    board:[
+    board: [
         "프론트와 백엔드를 같이 구현한 게시판 프로그램\nSpring Boot와 MyBatis 기반의 웹 애플리케이션으로, 사용자 로그인, 회원가입, 이메일 인증, 게시판 기능, 댓글 기능,페이지네이션을 구현했습니다.",
         "로그인 페이지와 기능을 구현  \n (유효성 검사도 구현하였습니다.)",
         "회원가입 페이지와 기능을 구현 \n (유효성 검사도 구현하였습니다.)",
         "마이페이지와 기능을 구현  \n (유효성 검사도 구현하였습니다.)",
         "",
         "게시판 등록후 모습입니다."
+    ],
+    homggoo:[
+        "중고나라와 비슷한 중고가구들을 거래할수 있는 사이트를 구현했습니다.\n 백엔드와 프론트엔드를 다 접하여 관리자페이지, 게시물 관리, 공지사항 등록, 회원가입, 소설로그인, 마이페이지 수정을 구현했습니다. \n <a href='https://homggoo.hyeongyuchung.com' target='_blank'>HOMGGOO</a> 을 통해 들어가볼수있습니다.",
+        "로그인 페이지와 기능을 구현",
+        "회원가입 페이지와 기능을 구현",
+        "관리자 페이지와 기능을 구현",
+        "관리자가 공지사항을 관리하는 기능을 구현",
+        "관리자가 공지사항을 등록 할 수 있도록 ckeditor를 사용하여 구현",
+        "관리자가 게시글을 관리하는 기능을 구현",
+        "관리자가 회원 검색하고 관리하는 기능을 구현",
+        "회원 정보 관리와 구매 물품에 대한 기능을 구현",
+        "회원 정보 수정과 탈퇴 기능을 구현",
+        "관리자가 등록한 공지사항 검색과 공지사항을 볼수 있는 기능을 구현",
+        "상세 공지사항",
+        "중고거래가 이루어질수 있는 거래 페이지",
+        "회원들의 소통이 이루어지는 커뮤니티 페이지"
     ]
 };
 
@@ -234,6 +279,11 @@ function renderDialogSlides() {
         if (descriptionText) {
             const desc = document.createElement('div');
             desc.innerHTML = descriptionText.replace(/\n/g, '<br>');
+            desc.querySelectorAll('a').forEach(a => {
+                a.style.color = "#F1B540";
+                a.style.textDecoration = "underline"; // 선택
+                a.setAttribute('target', '_blank');   // 새 탭 열기
+            });
             desc.style.color = 'white';
             desc.style.marginTop = '1rem';
             desc.style.fontSize = '1rem';
@@ -270,6 +320,10 @@ function showDialogSlide(index) {
     currentDialogIndex = index;
     renderDialogSlides();
 }
+
+dialog.querySelector(':scope>.modal>.closeBtn').addEventListener('click', (e) => {
+    dialog.classList.remove('visible');
+})
 
 prev.addEventListener('click', () => showDialogSlide(currentDialogIndex - 1));
 next.addEventListener('click', () => showDialogSlide(currentDialogIndex + 1));
