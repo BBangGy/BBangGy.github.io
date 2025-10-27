@@ -148,7 +148,8 @@ const projectImageCount = {
     taza: 7,
     annualLeave: 7,
     board: 6,
-    homggoo:13
+    homggoo:13,
+    alleon:14
 };
 const projectDescriptions = {
     clone: [
@@ -216,6 +217,22 @@ const projectDescriptions = {
         "상세 공지사항",
         "중고거래가 이루어질수 있는 거래 페이지",
         "회원들의 소통이 이루어지는 커뮤니티 페이지"
+    ],
+    alleon:[
+        "사용자가 필요한 정부 복지를 한눈에 확인할 수 있는 맞춤형 웹 서비스를 구현했습니다.\n 게시물·공지사항 관리, 페이지네이션, 소셜 로그인 기반 회원가입을 지원하며, 공공 API를 연동해 실시간 데이터를 제공합니다.\n <a href='#' target='_blank'>AEO</a> 을 통해 들어가볼수있습니다.",
+        "사용자가 원하는 복지를 검색할 수 있도록 구현",
+        "",
+        "",
+        "선택한 복지에 대해 상세 내용을 볼 수 있도록 구현",
+        "자유게시판을 통해 사람들과의 소통을 할 수 있게 구현",
+        "게시글에 대한 상세 내용을 볼 수 있도록 구현, 댓글 또한 작성할 수 있도록 구현",
+        "게시글을 작성할 수 있도록 구현",
+        "공지사항을 볼 수 있도록 구현",
+        "공지사항에 대한 상세 내용을 볼 수 있도록 구현",
+        "자기 정보를 알 수 있는 마이페이지를 구현",
+        "원하는 날짜에 마크할 수 있도록 기능을 구현",
+        "마크된 목록을 누르면 상세 내용을 간단하게 알려줄수 있도록 구현",
+        "즐겨찾기한 목록을 볼 수 있도록 구현"
     ]
 };
 
@@ -300,7 +317,7 @@ function renderDialogSlides() {
     const countInfo = document.createElement('div');
     countInfo.textContent = `${currentDialogIndex + 1} / ${currentImages.length}`;
     countInfo.style.color = 'white';
-    countInfo.style.marginTop = '1rem';
+    countInfo.style.paddingTop = '2.5rem';
     countInfo.style.fontSize = '1.2rem';
     countInfo.style.textAlign = 'center';
     dialogSlider.appendChild(countInfo);

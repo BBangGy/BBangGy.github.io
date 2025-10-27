@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "../def.scss";
+@import "../def";
 
 /* 전역 애니메이션 */
 @keyframes return-top {
@@ -106,6 +106,18 @@
     height: 45rem;
     border-radius: 0.625rem;
 
+    > .closeBtn {
+      position: absolute;
+      top: 0;
+      right: 10%;
+      cursor: pointer;
+
+      > img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
     > .sliderWrapper {
       @include flex(column, center, center);
       width: 100%;
@@ -116,6 +128,16 @@
         @include flex(column, center, center);
         width: 100%;
         height: 100%;
+        //> .alleon.box {
+        //  > img {
+        //    width: 100%;
+        //    height: 30rem !important;
+        //  }
+        //  >.img{
+        //    width: 50rem;
+        //    height: 35rem;
+        //  }
+        //}
 
         > .item {
           @include flex(column, center, center);
@@ -125,7 +147,7 @@
 
           > img {
             width: 50rem;
-            height: 45rem;
+            height: 35rem;
             border-radius: 0.625rem;
           }
         }
@@ -336,16 +358,18 @@
             transition: transform 0.5s ease-in-out;
             width: 48.1875rem;
 
+
             > .box {
               @include flex(column, center, center, 1rem);
               width: 48.1875rem;
               height: 30rem;
               flex-shrink: 0;
               cursor: pointer;
+              pointer-events: none;
 
 
               div {
-                @include flex(column, center, center,0.5rem);
+                @include flex(column, center, center, 0.5rem);
                 width: 9rem;
                 height: 2rem;
                 opacity: 1;
@@ -375,6 +399,8 @@
                 }
               }
 
+              &.alleon > img { height: 30rem; }
+
               &.active {
                 > img {
                   transform: rotateZ(0deg);
@@ -382,9 +408,12 @@
                   transition-duration: 400ms;
                   transition-timing-function: ease-out;
                   opacity: 1;
+                  cursor: pointer;
+                  pointer-events: auto;
                 }
-                >div{
-                  >.list{
+
+                > div {
+                  > .list {
                     opacity: 1;
                   }
                 }
@@ -719,14 +748,15 @@
             }
           }
 
-          >.contact{
+          > .contact {
             text-align: right;
             //height: 100%;
             position: absolute;
             bottom: 0;
             right: 0;
-            >span{
-              
+
+            > span {
+
             }
           }
 
@@ -762,7 +792,8 @@
               transform: rotateY(180deg);
             }
           }
-          >.contact{
+
+          > .contact {
             right: 0;
           }
         }

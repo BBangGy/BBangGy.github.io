@@ -99,6 +99,16 @@
   height: 45rem;
   border-radius: 0.625rem;
 }
+#dialog > .modal > .closeBtn {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  cursor: pointer;
+}
+#dialog > .modal > .closeBtn > img {
+  width: 2rem;
+  height: 2rem;
+}
 #dialog > .modal > .sliderWrapper {
   display: flex;
   flex-direction: column;
@@ -130,7 +140,7 @@
 }
 #dialog > .modal > .sliderWrapper > .slider > .item > img {
   width: 50rem;
-  height: 45rem;
+  height: 35rem;
   border-radius: 0.625rem;
 }
 #dialog > .modal > .sliderWrapper > .slider > span {
@@ -349,6 +359,7 @@
   height: 30rem;
   flex-shrink: 0;
   cursor: pointer;
+  pointer-events: none;
 }
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box div {
   display: flex;
@@ -382,12 +393,17 @@
   width: 48.1875rem;
   opacity: 0;
 }
+#main .common.projects > .layout-container > .sliderWrapper > .slider > .box.alleon > img {
+  height: 30rem;
+}
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box.active > img {
   transform: rotateZ(0deg);
   transition-property: transform, opacity;
   transition-duration: 400ms;
   transition-timing-function: ease-out;
   opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
 }
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box.active > div > .list {
   opacity: 1;
