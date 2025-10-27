@@ -99,16 +99,6 @@
   height: 45rem;
   border-radius: 0.625rem;
 }
-#dialog > .modal > .closeBtn {
-  position: absolute;
-  top: 0;
-  right: 10%;
-  cursor: pointer;
-}
-#dialog > .modal > .closeBtn > img {
-  width: 2rem;
-  height: 2rem;
-}
 #dialog > .modal > .sliderWrapper {
   display: flex;
   flex-direction: column;
@@ -140,7 +130,7 @@
 }
 #dialog > .modal > .sliderWrapper > .slider > .item > img {
   width: 50rem;
-  height: 35rem;
+  height: 45rem;
   border-radius: 0.625rem;
 }
 #dialog > .modal > .sliderWrapper > .slider > span {
@@ -354,22 +344,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   width: 48.1875rem;
   height: 30rem;
   flex-shrink: 0;
   cursor: pointer;
-  pointer-events: none;
 }
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0;
   width: 9rem;
   height: 2rem;
-  opacity: 1;
+  opacity: 0;
 }
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box div > span {
   width: 100%;
@@ -385,27 +374,11 @@
   transition-duration: 200ms;
   transition-timing-function: ease-out;
 }
-#main .common.projects > .layout-container > .sliderWrapper > .slider > .box div > .list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 48.1875rem;
-  opacity: 0;
-}
-#main .common.projects > .layout-container > .sliderWrapper > .slider > .box.alleon > img {
-  height: 30rem;
-}
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box.active > img {
   transform: rotateZ(0deg);
   transition-property: transform, opacity;
   transition-duration: 400ms;
   transition-timing-function: ease-out;
-  opacity: 1;
-  cursor: pointer;
-  pointer-events: auto;
-}
-#main .common.projects > .layout-container > .sliderWrapper > .slider > .box.active > div > .list {
   opacity: 1;
 }
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box > img {
@@ -430,6 +403,7 @@
   transition-timing-function: ease-out;
 }
 #main .common.projects > .layout-container > .sliderWrapper > .slider > .box > img:hover + div {
+  opacity: 1;
   transition-property: opacity;
   transition-duration: 400ms;
   transition-timing-function: ease-out;
@@ -687,11 +661,9 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0;
-  width: 100vw;
-  height: auto;
 }
 #main .common.about > .layout-container > .pro-container {
-  width: 100%;
+  width: 30rem;
   height: 30rem;
   position: relative;
 }
@@ -703,12 +675,6 @@
   opacity: 1;
   transform: rotateY(0deg);
 }
-#main .common.about > .layout-container > .pro-container > .contact {
-  text-align: right;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
 #main .common.about > .layout-container > .pro-container > .profile-image {
   display: flex;
   flex-direction: column;
@@ -718,7 +684,7 @@
   top: 0;
   left: 0;
   background-repeat: no-repeat;
-  width: 30rem;
+  width: 100%;
   height: 100%;
   border-radius: 99rem;
   border: 0.0625rem solid #ffffff;
@@ -741,9 +707,6 @@
   background-position: center top;
   opacity: 0;
   transform: rotateY(180deg);
-}
-#main .common.about > .layout-container > .pro-container > .contact {
-  right: 0;
 }
 #main .common.about > .layout-container > .introduce-container {
   display: flex;
@@ -783,10 +746,6 @@
   font-family: "Oswald", sans-serif;
   line-height: 3rem;
   font-size: 1.2rem;
-}
-#main .common.about > .layout-container > .introduce-container > .education > .edu > .list > .item:first-child > span:last-child {
-  display: block;
-  text-indent: 2rem;
 }
 #main .common.about > .layout-container > .introduce-container > .education > .license {
   height: 100%;
