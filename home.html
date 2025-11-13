@@ -8,20 +8,22 @@
 
     <title>PORTPOLIO</title>
     <link rel="stylesheet" href="./assets/common.css">
-    <link rel="stylesheet" href="./assets/styles/index.min.css">
+    <link rel="stylesheet" href="./assets/styles/home.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Oswald:wght@200..700&display=swap"
           rel="stylesheet">
-    <script defer src="assets/scripts/index.js"></script>
+    <script defer src="assets/scripts/home.js"></script>
 </head>
 <body>
 <div id="dialog">
     <div class="modal">
+        <span class="closeBtn">
+            <img src="/assets/images/close.png" alt="">
+        </span>
         <div class="sliderWrapper">
             <div class="slider">
-                <div class="item">
-                </div>
+                <div class="item"></div>
                 <span>설명</span>
             </div>
             <button class="prev">이전</button>
@@ -49,56 +51,63 @@
         <button class="start">start</button>
     </section>
     <section id="about" class="common about">
-    <h2 class="title">about</h2>
-    <div class="layout-container">
-        <div class="pro-container">
-            <div class="profile-image def"></div>
-            <div class="profile-image hov"></div>
-        </div>
-        <div class="introduce-container">
-            <div class="introduce">
-                <span><strong>성장</strong>하려고 <strong>노력</strong>하는 <strong>정현규</strong> 입니다</span>
-            </div>
-            <div class="education">
-                <div class="edu">
-                    <span>education</span>
-                    <ul class="list">
-                        <li class="item">
-                            <span>영남대학교 컴퓨터공학과 학사졸업 (25.02)</span>
-                        </li>
-                        <li class="item">
-                            직무 부트캠프 프론트엔드 현직자와 함께하는
-                            개발 직무 A to Z 수료 (코멘토) (25.01-25.02)
-                        </li>
-                        <li class="item">
-                            (스마트웹&콘텐츠개발)스마트웹 응용 프로그래밍 개발자 수료 (25.02-25.08)
-                        </li>
-                    </ul>
-                </div>
-                <div class="license">
-                    <span>license</span>
-                    <ul class="list">
-                        <li class="item">
-                            정보처리기사
-                        </li>
-                        <li class="item">
-                            SQLD
-                        </li>
-                        <li class="item">
-                            컴퓨터활용능력1급
-                        </li>
-                        <li class="item">
-                            OPIC IH
-                        </li>
-                    </ul>
+        <h2 class="title">about</h2>
+        <div class="layout-container">
+            <div class="pro-container">
+                <div class="profile-image def"></div>
+                <div class="profile-image hov"></div>
+                <div class="contact">
+                    <a href="https://github.com/BBangGy">
+                        <img src="assets/images/logos/github.png" alt="">
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="contact-container">
+            <div class="introduce-container">
+                <div class="introduce">
+                    <span>모르는 것을 두려워하지 않고 <strong>배우는 개발자 정현규</strong> 입니다</span>
+                </div>
+                <div class="education">
+                    <div class="edu">
+                        <span>education</span>
+                        <ul class="list">
+                            <li class="item">
+                                <span>영남대학교 컴퓨터공학과 학사졸업 (25.02)</span> <br>
+                                <span>&nbsp;-SW중심사업단 MIDAS GROUP 우수상</span>
+                            </li>
+                            <li class="item">
+                                직무 부트캠프 프론트엔드 현직자와 함께하는
+                                개발 직무 A to Z 수료 (코멘토) (25.01-25.02)
+                            </li>
+                            <li class="item">
+                                (스마트웹&콘텐츠개발)스마트웹 응용 프로그래밍 개발자 수료 (25.02-25.08)
+                            </li>
+                        </ul>
 
+                    </div>
+                    <div class="license">
+                        <span>license</span>
+                        <ul class="list">
+                            <li class="item">
+                                정보처리기사
+                            </li>
+                            <li class="item">
+                                SQLD
+                            </li>
+                            <li class="item">
+                                컴퓨터활용능력1급
+                            </li>
+                            <li class="item">
+                                OPIC IH
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-container">
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="skills" class="common skills">
         <h2 class="title">skills</h2>
@@ -228,45 +237,124 @@
         <div class="layout-container">
             <div class="sliderWrapper">
                 <div class="slider">
-                    <div class="clone box active">
-                        <div class="layer"></div>
-                        <div class="layer"></div>
-                        <div class="layer"></div>
-                        <img src="assets/images/projects/clone/clone1.png" alt="">
+                    <div class="r3f box active">
+                        <img src="assets/images/projects/r3f/r3f1.png" alt="">
                         <div>
-                            <span>웹페이지 클론</span>
+                            <span>리액트 인터렉티브 웹</span>
+                            <ul class="list">
+                                <li class="item">REACT</li>
+                                <li class="item">HTML</li>
+                                <li class="item">CSS</li>
+                                <li class="item">JAVASCRIPT</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="taza box">
-                        <img src="assets/images/projects/taza/taza1.png" alt="">
+                    <div class="alleon box">
+                        <img src="assets/images/projects/alleon/alleon1.png" alt="">
                         <div>
-                            <span>타자</span>
+                            <span>AEO</span>
+                            <ul class="list">
+                                <li class="item">HTML</li>
+                                <li class="item">CSS</li>
+                                <li class="item">JAVASCRIPT</li>
+                                <li class="item">JAVA</li>
+                                <li class="item">MARIADB</li>
+                                <li class="item">MYBATIS</li>
+                                <li class="item">ckEditor</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="kobook box">
-                        <img src="assets/images/projects/kobook/kobook1.png" alt="">
+                    <div class="homggoo box">
+                        <img src="assets/images/projects/homggoo/homggoo1.png" alt="">
                         <div>
-                            <span>코북</span>
+                            <span>homggoo</span>
+                            <ul class="list">
+                                <li class="item">HTML</li>
+                                <li class="item">CSS</li>
+                                <li class="item">JAVASCRIPT</li>
+                                <li class="item">JAVA</li>
+                                <li class="item">MARIADB</li>
+                                <li class="item">MYBATIS</li>
+                                <li class="item">ckEditor</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="diary box">
                         <img src="assets/images/projects/diary/diary1.png" alt="">
                         <div>
                             <span>리액트 다이어리</span>
-                        </div>
-                    </div>
-                    <div class="r3f box">
-                        <img src="assets/images/projects/r3f/r3f1.png" alt="">
-                        <div>
-                            <span>리액트 인터렉티브 웹</span>
+                            <ul class="list">
+                                <li class="item">REACT</li>
+                                <li class="item">HTML</li>
+                                <li class="item">CSS</li>
+                                <li class="item">JAVASCRIPT</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="annualLeave box">
-                        <img src="assets/images/projects/clone/clone1.png" alt="">
+                        <img src="assets/images/projects/annualLeave/annualLeave1.png" alt="">
                         <div>
                             <span>연차프로그램</span>
+                            <ul class="list">
+                                <li class="item">HTML</li>
+                                <li class="item">CSS</li>
+                                <li class="item">JAVASCRIPT</li>
+                                <li class="item">SPRINGBOOT</li>
+                                <li class="item">JAVA</li>
+                                <li class="item">MARIADB</li>
+                                <li class="item">MYBATIS</li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="board box">
+                        <img src="assets/images/projects/board/board1.png" alt="">
+                        <div>
+                            <span>게시판 미니 프로젝트</span>
+                            <ul class="list">
+                                <li class="item">HTML</li>
+                                <li class="item">CSS</li>
+                                <li class="item">JAVASCRIPT</li>
+                                <li class="item">JAVA</li>
+                                <li class="item">MARIADB</li>
+                                <li class="item">MYBATIS</li>
+                                <li class="item">ckEditor</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clone box">
+                        <img src="assets/images/projects/clone/clone1.png" alt="">
+                        <div>
+                            <span>웹페이지 클론</span>
+                            <ul class="list">
+                                <li class="item">HTML</li>
+                                <li class="item">CSS</li>
+                                <li class="item">JAVASCRIPT</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="taza box">
+                        <img src="assets/images/projects/taza/taza1.png" alt="">
+                        <div>
+                            <span>타자</span>
+                            <ul class="list">
+                                <li class="item">HTML</li>
+                                <li class="item">CSS</li>
+                                <li class="item">JAVASCRIPT</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="kobook box">
+                        <img src="assets/images/projects/kobook/kobook1.png" alt="">
+                        <div>
+                            <span>코북</span>
+                            <ul class="list">
+                                <li class="item">HTML</li>
+                                <li class="item">CSS</li>
+                                <li class="item">JAVASCRIPT</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
                 <button class="next">❯</button>
                 <button class="prev">❮</button>
